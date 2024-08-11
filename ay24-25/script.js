@@ -170,15 +170,23 @@ function downloadImage() {
     link.download = `generated-upintersoc2425-${Date.now()}.png`;
     link.click();
 
-    alert("Download started!");
+    showStatus("download");
 }
 
 function copyCaption() {
     navigator.clipboard.writeText(getCaption()).then(() => {
-        alert("Copied!");
+        showStatus("copy");
     }).catch(err => {
         alert("Cannot copy the caption. Manually copy it from the text field.")
     });
+}
+
+function showStatus(id) {
+    const statusElement = document.querySelector(`.status.${id}`);
+    if(!statusElement) return;
+
+    statusElement.classList.add("active");
+    setTimeout(() => statusElement.classList.remove("active"), 3000);
 }
 
 window.onload = function() {
