@@ -169,6 +169,8 @@ function downloadImage() {
     link.href = image;
     link.download = `generated-upintersoc2425-${Date.now()}.png`;
     link.click();
+
+    alert("Download started!");
 }
 
 function copyCaption() {
