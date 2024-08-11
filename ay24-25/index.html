@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Intersoc Frame | AY24-25</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <aside>
+        <canvas height="1000" width="1000"></canvas>
+        <br>
+        
+        <div>
+            <input type="checkbox" name="circular"> Circular Preview
+        </div>
+
+        <section class="two-col">
+            <label>Get DP</label>
+            <input name="image" type="file" accept="image/*" placeholder="Upload image">
+            
+            <div class="adjust-controls">
+                
+                <button class="icon" name="image_up"><i class="fa-solid fa-angle-up"></i></button>
+                <br/>
+                <button class="icon" name="image_left"><i class="fa-solid fa-angle-left"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="icon" name="image_right"><i class="fa-solid fa-angle-right"></i></button>
+                <br/>
+                
+                <button class="icon" name="image_down"><i class="fa-solid fa-angle-down"></i></button>
+
+                <br/>
+                <button class="icon" name="image_zoomout"><i class="fa-solid fa-magnifying-glass-minus"></i></button> 
+                &nbsp;
+                <button class="icon" name="image_zoomin"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+            </div>
+            <div>
+                <button name="upload">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    Upload</button>
+                <br/>
+                <button name="download_dp" class="primary">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Download</button>
+
+            </div>
+        </section>
+    </aside>
+    <main>
+        <section>
+            <label>Get Caption</label>
+
+            <input name="name" type="text" placeholder="Enter your name">
+            <select name="year" placeholder="Choose your year level">
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+                <option>5th Year</option>
+                <option>6th Year</option>
+                <option>7th Year</option>
+                <option>Alum</option>
+            </select>
+            <br/>
+            <textarea name="caption" readonly></textarea>
+            <br/><br/>
+            <button name="copy_caption" class="primary">
+                <i class="fa-regular fa-copy"></i>
+                Copy Caption</button>
+        </section>
+    </main>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

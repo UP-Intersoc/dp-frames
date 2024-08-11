@@ -1,0 +1,151 @@
+* {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #004771;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+main, aside {
+    width: 95%;
+    max-width: 400px;
+    min-width: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    border-radius: 5px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+canvas.circular {
+    border-radius: 50%;
+}
+
+section {
+    border: 1px dashed #aaa;
+    border-radius: 5px;
+    padding: 20px 20px 15px 20px;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section > label {
+    display: block;
+    background-color: #fff;
+    width: fit-content;
+    padding: 0 5px;
+    position: absolute;
+    top: -7px;
+    left: 13px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+section.two-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+section.two-col > * {
+    flex: auto;
+}
+
+.adjust-controls {
+    text-align: center;
+    margin-right: 15px;
+}
+
+input:not([type='checkbox']), textarea, select, button {
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 5px;
+}
+
+
+input[name='image'] {
+    display: none;
+}
+
+input:not([type='checkbox']), textarea {
+    border: 1px solid #bbb;
+    box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.05);
+    background-color: #fbfbfb;
+    
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button, select {
+    cursor: pointer;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 0 20px;
+    transition: all 80ms ease;
+    font-size: 0.95rem;
+}
+
+
+button.primary {
+    background-color: #004771;
+    box-shadow: 2px 2px 0px #042d45;
+    color: #fff;
+}
+
+button.icon {
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+}
+
+button.icon > i {
+    margin: 0;
+}
+
+button.icon:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+
+button:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+i {
+    margin-right: 3px;
+}
+
+select {
+    border: 1px solid #bbb;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    height: 300px;
+}
